@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class RemindersConfig(AppConfig):
+class ExamBoardConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'reminders'
+    name = 'exam_board'
