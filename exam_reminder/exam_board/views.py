@@ -1,6 +1,8 @@
 from django.shortcuts import render
+from .models import Exam
+import datetime
 
 
-# Create your views here.
 def board(response):
-    return render(response, "exam_board/base.html", {})
+    exams = Exam.objects.all().filter(date__gte=datetime.date.today()).order_by('date')
+    return render(response, "exam_board/board.html", {'exams': exams})

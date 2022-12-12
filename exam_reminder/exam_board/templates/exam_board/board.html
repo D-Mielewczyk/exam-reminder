@@ -1,0 +1,27 @@
+{% extends 'exam_board/base.html' %}
+
+{% block content %}
+<br>
+{% if exams %}
+    {% for exam in exams %}
+        <div class="bg-dark p-4 rounded">
+        <dl class = 'row'>
+            <dt class="col-sm-3">Name</dt>
+            <dd class="col-sm-9">{{ exam.name }}</dd>
+            <dt class="col-sm-3">Subject</dt>
+            <dd class="col-sm-9">{{ exam.subject }}</dd>
+            <dt class="col-sm-3">Room</dt>
+            <dd class="col-sm-9">{{ exam.room }}</dd>
+            <dt class="col-sm-3">Date</dt>
+            <dd class="col-sm-9">{{ exam.date|date:"d M Y, H:m" }}</dd>
+            <dd class="col-sm-9"><em>{{ exam.description }}</em></dd>
+        </dl>
+        </div>
+        <br>
+    {% endfor %}
+{% else %}
+    <div class="bg-dark p-4 rounded">
+        <h2>No exams available.</h2>
+    </div>
+{% endif %}
+{% endblock %}
