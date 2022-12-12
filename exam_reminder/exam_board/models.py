@@ -10,7 +10,7 @@ class Exam(models.Model):
     description = models.CharField(max_length=2000, blank=True)
 
     def __str__(self):
-        return self.name
+        return f"{self.name} z {self.subject}"
 
 
 class ExamFrom(forms.Form):
