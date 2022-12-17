@@ -3,3 +3,4 @@
 *.pyc
 exam_reminder/exam_reminder/__pycache__/settings.cpython-310.pyc
 *.pyc
+exam-venv/

@@ -1,4 +1,5 @@
 {% extends 'exam_board/base.html' %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 <br>
@@ -16,4 +17,11 @@
 </dl>
 </div>
 <br>
+<div class="bg-dark p-4 rounded">
+    <form action="{% url 'exam' exam.id %}" method="post">
+        {%  csrf_token %}
+        {{ form|crispy }}
+        <input type="submit" value="Submit">
+    </form>
+</div>
 {% endblock %}
