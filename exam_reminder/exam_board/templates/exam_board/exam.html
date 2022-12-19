@@ -4,7 +4,7 @@
 {% block content %}
 <br>
 <div class="bg-dark p-4 rounded">
-<dl class = 'row'>
+<dl class='row'>
     <dt class="col-sm-3">Name</dt>
     <dd class="col-sm-9">{{ exam.name }}</dd>
     <dt class="col-sm-3">Subject</dt>
@@ -12,7 +12,7 @@
     <dt class="col-sm-3">Room</dt>
     <dd class="col-sm-9">{{ exam.room }}</dd>
     <dt class="col-sm-3">Date</dt>
-    <dd class="col-sm-9">{{ exam.date|date:"d M Y, H:m" }}</dd>
+    <dd class="col-sm-9">{{ exam.date|date:"d M Y, H:m"}}</dd> 
     <dd class="col-sm-9"><em>{{ exam.description }}</em></dd>
 </dl>
 </div>
