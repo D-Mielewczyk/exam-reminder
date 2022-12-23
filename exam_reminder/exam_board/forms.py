@@ -7,4 +7,3 @@ class CreateExam(forms.Form):
     room = forms.CharField(max_length=200)
     date = forms.DateTimeField()
     description = forms.CharField(max_length=2000, blank=True)
-    
