@@ -23,6 +23,7 @@
 {% else %}
     <div class="bg-dark p-4 rounded">
         <h2>No exams available.</h2>
+        <a class="btn btn-primary" href='{% url 'past_board' %}'>See past exams</a>
     </div>
 {% endif %}
 {% endblock %}
