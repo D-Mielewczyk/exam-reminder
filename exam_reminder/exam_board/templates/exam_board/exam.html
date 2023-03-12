@@ -18,7 +18,8 @@
 </div>
 <br>
 <div class="bg-dark p-4 rounded">
-    <form action="{% url 'exam' exam.id %}" method="post">
+    <h3>Edit exam:</h3>
+    <form action="{% url 'exam' exam.id %}" method="POST">
         {%  csrf_token %}
         {{ form|crispy }}
         <input type="submit" value="Submit">
