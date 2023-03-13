@@ -81,12 +81,11 @@ WSGI_APPLICATION = 'exam_reminder.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'exam_reminder_db',
-        'USER': 'postgres',
-        'PASSWORD': environ['DB_PASSWORD'],
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': environ.get('DBNAME'),
+        'HOST': environ.get('DBHOST'),
+        'USER': environ.get('DBUSER'),
+        'PASSWORD': environ.get('DBPASS'),
     }
 }
 
